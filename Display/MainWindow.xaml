@@ -1,0 +1,17 @@
+﻿<Window x:Class="Display.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Display"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="840" Width="880">
+	<StackPanel Orientation="Horizontal">
+		<Canvas Name="MyCanvas" Height="780" Width="780" Margin="5"/>
+		<StackPanel Width="50" Margin="10">
+			<Button Name="BtnClear" Height="20" Margin ="2" Click="BtnClear_Click">Clear</Button>
+			<Button Name="BtnBegin" Height="20" Margin ="2" Click="BtnBegin_Click">Begin</Button>
+			<Button Name="BtnEnd" Height="20" Margin ="2" Click="BtnEnd_Click">End</Button>
+		</StackPanel>
+	</StackPanel>
+</Window>
