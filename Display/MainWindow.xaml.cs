@@ -22,8 +22,6 @@ namespace Display
 
 			timer = new Timer(150);
 			timer.Elapsed += Timer_Elapsed;
-
-
 		}
 
 		private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -40,7 +38,6 @@ namespace Display
 				AddPoint(@group.GroupCenter);
 			});
 		}
-
 
 		private void AddPoint(Point point)
 		{
@@ -76,11 +73,30 @@ namespace Display
 		{
 			timer.Start();
 			group = new BirdGroup(10, (int)MyCanvas.Width, (int)MyCanvas.Height);
+			//@group = new BirdGroup(1);
 		}
 
 		private void BtnEnd_Click(object sender, RoutedEventArgs e)
 		{
 			timer.Stop();
+		}
+
+		private void BtnTick_Click(object sender, RoutedEventArgs e)
+		{
+			Timer_Elapsed(null, null);
+		}
+
+		private void BtnDisplay_Click(object sender, RoutedEventArgs e)
+		{
+			Dispatcher.Invoke(() =>
+			{
+				MyCanvas.Children.Clear();
+				foreach (var bird in @group.Birds)
+				{
+					AddText(bird.Location, bird.BirdNum.ToString(), Color.FromRgb(255, 0, 0));
+				}
+				AddPoint(@group.GroupCenter);
+			});
 		}
 	}
 }

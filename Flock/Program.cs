@@ -10,11 +10,17 @@ namespace Flock
 	{
 		static void Main(string[] args)
 		{
-			var bird = new Bird{Location = new Point(5,5)};
+			var flock = new BirdGroup(10, 780, 780);
 			while (true)
 			{
-				bird.tick(new Point(10, 10));
+				flock.Tick();
 			}
+
+			//var bird = new Bird{Location = new Point(5,5)};
+			//while (true)
+			//{
+			//	bird.tick(new Point(10, 10));
+			//}
 		}
 	}
 }

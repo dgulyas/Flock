@@ -20,6 +20,24 @@ namespace Flock
 				var location = new Point(rand.NextDouble() * areaWidth, rand.NextDouble()*areaHeight);
 				Birds.Add(new Bird { BirdNum = i, Velocity = new Velocity(0, 0), Location = location });
 			}
+			GroupCenter = GetGroupCenter();
+		}
+
+		public BirdGroup(int testCase)
+		{
+			switch (testCase)
+			{
+				case 1:
+					Birds.Add(new Bird { BirdNum = 1, Velocity = new Velocity(0, 0), Location = new Point(10, 10) });
+					Birds.Add(new Bird { BirdNum = 2, Velocity = new Velocity(0, 0), Location = new Point(110, 10) });
+					Birds.Add(new Bird { BirdNum = 3, Velocity = new Velocity(0, 0), Location = new Point(10, 110) });
+					Birds.Add(new Bird { BirdNum = 4, Velocity = new Velocity(0, 0), Location = new Point(110, 110) });
+					GroupCenter = GetGroupCenter();
+					break;
+				default:
+					break;
+			}
+
 		}
 
 		public void Tick()
@@ -27,7 +45,7 @@ namespace Flock
 			GroupCenter = GetGroupCenter();
 			foreach (var bird in Birds)
 			{
-				bird.tick(GroupCenter);
+				bird.Tick(GroupCenter);
 			}
 		}
 
