@@ -13,7 +13,7 @@
 			<Button Name="BtnBegin" Height="20" Margin ="2" Click="BtnBegin_Click">Begin</Button>
 			<Button Name="BtnEnd" Height="20" Margin ="2" Click="BtnEnd_Click">End</Button>
             <Button Name="BtnTick" Height="20" Margin ="2" Click="BtnTick_Click">Tick</Button>
-            <Button Name="BtnDisplay" Height="20" Margin ="2" Click="BtnDisplay_Click">2</Button>
+            <Button Name="BtnDisplay" Height="20" Margin ="2" Click="BtnDisplay_Click">Redraw</Button>
         </StackPanel>
 	</StackPanel>
 </Window>

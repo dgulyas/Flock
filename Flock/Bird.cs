@@ -12,8 +12,6 @@ namespace Flock
 		public double Acceleration = 5;
 		public double TopSpeed = 8;
 
-		//I think this implementation is wrong somehow.
-		//The Flock always moves up/left, never down/right.
 		public void Tick(Point groupCenter)
 		{
 			//find birds distance from the center of the flock
